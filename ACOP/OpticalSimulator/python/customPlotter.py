@@ -37,10 +37,10 @@ def plotParetoBaselineV1():
     
         for channelNumber in channelNumberEntries:
             col += 1
-            osnr = open("../../output/optimizedPareto/osnr_{}amp_{}channel".format(ampNumber, channelNumber), "r")  
+            osnr = open("../output/optimizedPareto/osnr_{}amp_{}channel".format(ampNumber, channelNumber), "r")  
             osnr = osnr.readlines()[0].replace("[[", "").replace("]]", "").split("], [")
             
-            ripple = open("../../output/optimizedPareto/ripple_{}amp_{}channel".format(ampNumber, channelNumber), "r")
+            ripple = open("../output/optimizedPareto/ripple_{}amp_{}channel".format(ampNumber, channelNumber), "r")
             ripple = ripple.readlines()[0].replace("[[", "").replace("]]", "").split("], [")
 
             count = 0
@@ -74,5 +74,5 @@ def plotParetoBaselineV1():
         fig.tight_layout(pad = 1.0)
         legend_without_duplicate_labels(fig)
         
-        plt.savefig('../../output/optimizedPareto/pareto{}.pdf'.format(ampNumber), format = 'pdf', dpi = 1000, bbox_inches = "tight")
+        plt.savefig('../output/optimizedPareto/pareto{}.pdf'.format(ampNumber), format = 'pdf', dpi = 1000, bbox_inches = "tight")
              
