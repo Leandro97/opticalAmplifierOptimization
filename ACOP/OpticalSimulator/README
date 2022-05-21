@@ -1,0 +1,3 @@
+Before executing Default_Var run the following command to execut flask server:
+
+env FLASK_APP=regressor.py flask run
